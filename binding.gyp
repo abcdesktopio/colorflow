@@ -11,8 +11,8 @@
                 "/native/include"
             ],
             "libraries": [
-                "/usr/local/lib/libcolorflow.a",
-                "/usr/local/lib/libbmp.a",
+                "../libcolorflow.a",
+                "../libbmp.a",
                 "-lpng", 
                 "-ljpeg"
             ]

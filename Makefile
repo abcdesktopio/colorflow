@@ -9,5 +9,8 @@ clean: colorflow.o libnsbmp.o
 	rm libnsbmp.o
 	rm colorflow.o
 
+build: binding.gyp libbmp.a libcolorflow.a
+	npm run build
+
 test: colorflow.test.js
 	npm test
