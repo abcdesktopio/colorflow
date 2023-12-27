@@ -8,3 +8,6 @@ libcolorflow: native/include/libnsbmp.c native/colorflow.c
 clean: colorflow.o libnsbmp.o 
 	rm libnsbmp.o
 	rm colorflow.o
+
+test: colorflow.test.js
+	npm test
