@@ -5,6 +5,6 @@ module.exports = function getMedianColor(imageName){
     return colorflow.getAverageColor(imageName);
   }
   catch (err){
-    return err;
+    throw err;
   }
 }
