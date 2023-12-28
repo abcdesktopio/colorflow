@@ -40,13 +40,13 @@ CFLAGS_CC_Debug := \
 	-std=gnu++17
 
 INCS_Debug := \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/include/node \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/src \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/openssl/config \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/openssl/openssl/include \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/uv/include \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/zlib \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/v8/include \
+	-I/root/.cache/node-gyp/18.19.0/include/node \
+	-I/root/.cache/node-gyp/18.19.0/src \
+	-I/root/.cache/node-gyp/18.19.0/deps/openssl/config \
+	-I/root/.cache/node-gyp/18.19.0/deps/openssl/openssl/include \
+	-I/root/.cache/node-gyp/18.19.0/deps/uv/include \
+	-I/root/.cache/node-gyp/18.19.0/deps/zlib \
+	-I/root/.cache/node-gyp/18.19.0/deps/v8/include \
 	-I/native/include
 
 DEFS_Release := \
@@ -84,16 +84,18 @@ CFLAGS_CC_Release := \
 	-std=gnu++17
 
 INCS_Release := \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/include/node \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/src \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/openssl/config \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/openssl/openssl/include \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/uv/include \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/zlib \
-	-I/home/matteobeghelli/.cache/node-gyp/18.18.2/deps/v8/include \
+	-I/root/.cache/node-gyp/18.19.0/include/node \
+	-I/root/.cache/node-gyp/18.19.0/src \
+	-I/root/.cache/node-gyp/18.19.0/deps/openssl/config \
+	-I/root/.cache/node-gyp/18.19.0/deps/openssl/openssl/include \
+	-I/root/.cache/node-gyp/18.19.0/deps/uv/include \
+	-I/root/.cache/node-gyp/18.19.0/deps/zlib \
+	-I/root/.cache/node-gyp/18.19.0/deps/v8/include \
 	-I/native/include
 
 OBJS := \
+	$(obj).target/$(TARGET)/native/libnsbmp.o \
+	$(obj).target/$(TARGET)/native/libcolorflow.o \
 	$(obj).target/$(TARGET)/native/colorflow.o
 
 # Add to the list of files we specially track dependencies for.
@@ -131,8 +133,6 @@ LDFLAGS_Release := \
 	-m64
 
 LIBS := \
-	/usr/local/lib/libcolorflow.a \
-	/usr/local/lib/libbmp.a \
 	-lpng \
 	-ljpeg
 

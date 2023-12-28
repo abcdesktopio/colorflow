@@ -2,17 +2,17 @@
     "targets": [
         {
             "target_name": "colorflow",
-            "cflags!": [ "-fno-exceptions" ],
-            "cflags_cc!": [ "-fno-exceptions" ],
-            "sources": [
+            "cflags!": [ "-fno-exceptions", "-Wwrite-strings", "-Wunused-variable"],
+            "cflags_cc!": [ "-fno-exceptions",  "-Wwrite-strings", "-Wunused-variable" ],
+            "sources": [             
+                "native/libnsbmp.cpp",
+                "native/libcolorflow.cpp",
                 "native/colorflow.cpp"
             ],
             "include_dirs": [
                 "/native/include"
             ],
             "libraries": [
-                "../libcolorflow.a",
-                "../libbmp.a",
                 "-lpng", 
                 "-ljpeg"
             ]

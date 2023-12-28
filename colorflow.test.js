@@ -4,14 +4,6 @@ test("Should throw an error because the image doesn't exists", () => {
     expect( () => colorflow("noexist.png")).toThrow("No such file or directory");
 });
 
-test("Properly calculate background color for png format", () => {
-    expect(colorflow("images/red.png")).toBe("#FF0000");
-    expect(colorflow("images/green.png")).toBe("#00FF00");
-    expect(colorflow("images/blue.png")).toBe("#0000FF");
-    expect(colorflow("images/black.png")).toBe("#000000");
-    expect(colorflow("images/white.png")).toBe("#FFFFFF");
-    expect(colorflow("images/road.png")).toBe("#6B6A67");
-});
 
 test("Properly calculate background color for jpeg format", () => {
     expect(colorflow("images/red.jpeg")).toBe("#FE0000");
@@ -21,6 +13,17 @@ test("Properly calculate background color for jpeg format", () => {
     expect(colorflow("images/white.jpeg")).toBe("#FFFFFF");
     expect(colorflow("images/mountain.jpeg")).toBe("#366681");
 });
+
+
+test("Properly calculate background color for png format", () => {
+    expect(colorflow("images/red.png")).toBe("#FF0000");
+    expect(colorflow("images/green.png")).toBe("#00FF00");
+    expect(colorflow("images/blue.png")).toBe("#0000FF");
+    expect(colorflow("images/black.png")).toBe("#000000");
+    expect(colorflow("images/white.png")).toBe("#FFFFFF");
+    expect(colorflow("images/road.png")).toBe("#6B6A67");
+});
+
 
 test("Properly calculate background color for bmp format", () => {
     expect(colorflow("images/red.bmp")).toBe("#FF0000");
