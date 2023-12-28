@@ -14,12 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Compile libraries
-      run: make
-
-    - name: Remove output files
-      run: make clean
-
     - name: Build module
       run: make build
 
