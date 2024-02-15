@@ -16,8 +16,7 @@ jobs:
 
     - name: Install modules
       run: |
-        apt-get update 
-        apt-get install -y  imlib2-dev
+        sudo apt-get install -y  imlib2-dev
         make install
 
     - name: Build module
