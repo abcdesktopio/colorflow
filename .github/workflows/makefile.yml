@@ -15,7 +15,10 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install modules
-      run: make install
+      run: |
+        apt-get update 
+        apt-get install -y  imlib2-dev
+        make install
 
     - name: Build module
       run: make build
