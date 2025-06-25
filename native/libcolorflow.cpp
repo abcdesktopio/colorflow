@@ -67,8 +67,8 @@ void getAverageBorderColor(pixel** pixels_image, int *border_average_color, int 
 int* getAverageColor(pixel** pixels_image, double frame_percentage){
 
   // Establishing average color of the upper border
-  int average_RGBA[4] = {0,0,0,0};
-  getAverageBorderColor(pixels_image, average_RGBA, 0, (int)(height*frame_percentage), 0, width);
+  int up_border_average_color[4] = {0,0,0,0};
+  getAverageBorderColor(pixels_image, up_border_average_color, 0, (int)(height*frame_percentage), 0, width);
 
   // // Establishing average color of the right border
   // int right_border_average_color[4] = {0,0,0,0};
@@ -82,12 +82,11 @@ int* getAverageColor(pixel** pixels_image, double frame_percentage){
   // int left_border_average_color[4] = {0,0,0,0};
   // getAverageBorderColor(pixels_image, left_border_average_color, 0, height, 0, (int)(width*frame_percentage));
 
-  // // Establishing the average color of the frame
-  // static int average_RGBA[4];
-  // for(int i=0;i<4;i++){
-  //   average_RGBA[i] = up_border_average_color[i]+right_border_average_color[i]+down_border_average_color[i]+left_border_average_color[i];
-  //   average_RGBA[i] /= 4;
-  // }
+  // Establishing the average color of the frame
+  static int average_RGBA[4];
+  for(int i=0;i<4;i++){
+    average_RGBA[i] = up_border_average_color[i];
+  }
   
   return average_RGBA;
 }
