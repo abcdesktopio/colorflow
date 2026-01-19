@@ -26,5 +26,5 @@ jobs:
     - name: Run tests
       run: make test
 
-    - name: audit 
+    - name: Run audit 
       run: make audit
