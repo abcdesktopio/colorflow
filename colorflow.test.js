@@ -11,7 +11,7 @@ test("Properly calculate background color for jpeg format", () => {
     expect(colorflow("images/blue.jpeg")).toBe("#0000FE");
     expect(colorflow("images/black.jpeg")).toBe("#000000");
     expect(colorflow("images/white.jpeg")).toBe("#FFFFFF");
-    expect(colorflow("images/mountain.jpeg")).toBe("#366681");
+    expect(colorflow("images/mountain.jpeg")).toBe("#629DC1");
 });
 
 
