@@ -4,5 +4,8 @@ build: binding.gyp
 install:
 	npm install
 
+audit:
+	npm audit fix
+
 test: colorflow.test.js
 	npm test
