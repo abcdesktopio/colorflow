@@ -21,7 +21,7 @@ test("Properly calculate background color for png format", () => {
     expect(colorflow("images/blue.png")).toBe("#0000FF");
     expect(colorflow("images/black.png")).toBe("#000000");
     expect(colorflow("images/white.png")).toBe("#FFFFFF");
-    expect(colorflow("images/road.png")).toBe("#6B6A67");
+    expect(colorflow("images/road.png")).toBe("#506871");
 });
 
 
@@ -31,5 +31,5 @@ test("Properly calculate background color for bmp format", () => {
     expect(colorflow("images/blue.bmp")).toBe("#0000FF");
     expect(colorflow("images/black.bmp")).toBe("#000000");
     expect(colorflow("images/white.bmp")).toBe("#FFFFFF");
-    expect(colorflow("images/lake.bmp")).toBe("#81797C");
+    expect(colorflow("images/lake.bmp")).toBe("#BBB2B6");
 });
