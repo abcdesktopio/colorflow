@@ -2,6 +2,7 @@ build: binding.gyp
 	npm run build
 
 install:
+	npm --version 
 	npm install
 
 audit:
